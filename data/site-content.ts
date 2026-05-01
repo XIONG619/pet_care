@@ -1,0 +1,192 @@
+export type NavItem = {
+  href: string;
+  label: string;
+};
+
+export type HeroSlide = {
+  src: string;
+  alt: string;
+  title: string;
+  desc: string;
+};
+
+export type Feature = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+export type PricingPlan = {
+  tag: string;
+  price: string;
+  note: string;
+  features: string[];
+  featured?: boolean;
+};
+
+export type GalleryCard = {
+  title: string;
+  subtitle: string;
+  ariaLabel: string;
+  images: Array<{
+    src: string;
+    alt: string;
+  }>;
+};
+
+export type Review = {
+  quote: string;
+  name: string;
+  avatar: string;
+};
+
+export const navItems: NavItem[] = [
+  { href: "#services", label: "服务" },
+  { href: "#pricing", label: "价目" },
+  { href: "#space", label: "环境" },
+  { href: "#reviews", label: "评价" },
+  { href: "#contact", label: "联系" },
+];
+
+export const heroSlides: HeroSlide[] = [
+  {
+    src: "/store-exterior-ai.png",
+    alt: "中高级宠物洗护店门头外观，奶油色与鼠尾草绿搭配，通透明亮",
+    title: "店内环境展示图",
+    desc: "门头温暖清爽，路过时就能感受到中高级洗护店的整洁与安心。",
+  },
+  {
+    src: "/store-lounge-ai.png",
+    alt: "中高级宠物店接待等候区，浅木色柜台、温暖灯光与整洁陈列",
+    title: "接待等候区",
+    desc: "接待台、陈列区与等候角统一成柔和材质，让主人和宠物都更放松。",
+  },
+  {
+    src: "/store-grooming-ai.png",
+    alt: "中高级宠物店洗护美容区，洗护池、毛巾和护理用品整齐摆放",
+    title: "洗护美容区",
+    desc: "洗护与美容区域明亮有序，器具收纳整洁，体现专业度与卫生标准。",
+  },
+];
+
+export const heroStats = [
+  { value: "3000+", label: "累计服务宠物" },
+  { value: "4.9", label: "店铺综合评分" },
+  { value: "12h", label: "预约响应时效" },
+];
+
+export const features: Feature[] = [
+  {
+    icon: "🛁",
+    title: "基础洗护",
+    description: "洗澡、吹干、梳毛、耳道清洁与爪部基础整理，适合日常清洁维护。",
+  },
+  {
+    icon: "✂️",
+    title: "造型修剪",
+    description: "圆脸、日系、蓬松感修型等多种风格，兼顾宠物舒适和主人审美。",
+  },
+  {
+    icon: "🌿",
+    title: "精致护理",
+    description: "草本泡泡浴、去浮毛护理、除味护理与护毛素加持，提升毛发顺滑度。",
+  },
+  {
+    icon: "📷",
+    title: "离店拍照",
+    description: "护理结束后提供清爽留影角，让每次洗护都能带走一张好看的纪念照。",
+  },
+];
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    tag: "轻松洗洗",
+    price: "¥128",
+    note: "适合短毛或日常维护周期较短的宠物。",
+    features: ["温和洗澡与吹干", "指甲修整与脚底毛处理", "基础梳毛与香氛整理"],
+  },
+  {
+    tag: "店内主推",
+    price: "¥238",
+    note: "适合大部分需要完整护理和造型修饰的宠物。",
+    features: ["全流程洗护与精修吹毛", "面部、身体与尾巴修型", "皮毛护理与离店拍照"],
+    featured: true,
+  },
+  {
+    tag: "高阶护理",
+    price: "¥368",
+    note: "适合长毛、高毛量或需要额外舒缓护理的宠物。",
+    features: ["深层清洁与去浮毛护理", "局部修护与除味管理", "专属会员折扣优先适用"],
+  },
+];
+
+export const scheduleItems = [
+  { label: "营业时间", value: "10:00 - 20:00" },
+  { label: "预约建议", value: "提前 1 - 2 天更稳妥" },
+  { label: "服务范围", value: "猫咪 / 小中大型犬" },
+];
+
+export const appointmentNotes = [
+  "若宠物有皮肤敏感、耳部问题或情绪应激，请提前说明。",
+  "如需特殊造型，可携带参考图，到店后与美容师沟通确认。",
+  "护理完成前后可通过微信或电话同步状态，方便主人安心等待。",
+];
+
+export const galleryCards: GalleryCard[] = [
+  {
+    title: "奶油泡泡浴",
+    subtitle: "柔和蓬松感，拍照更上镜。",
+    ariaLabel: "奶油泡泡浴轮播控制",
+    images: [
+      { src: "/gallery-bath-1.png", alt: "洗护完成后的宠物，毛发蓬松柔软，带有奶油泡泡浴氛围" },
+      { src: "/gallery-bath-2.png", alt: "温暖宠物店内的猫咪泡泡浴护理氛围照片" },
+      { src: "/gallery-bath-3.png", alt: "两只洗护后的宠物在高级宠物店内呈现柔和蓬松感" },
+    ],
+  },
+  {
+    title: "草本舒缓护毛",
+    subtitle: "适合换毛期与轻敏感体质。",
+    ariaLabel: "草本舒缓护毛轮播控制",
+    images: [
+      { src: "/gallery-herbal-1.png", alt: "宠物店内的草本舒缓护毛场景，色调柔和高级" },
+      { src: "/gallery-herbal-2.png", alt: "长毛猫在草本护理后的高级宠物店照片" },
+      { src: "/gallery-herbal-3.png", alt: "草本护毛主题下，蓬松小狗与护理用品的实景照片" },
+    ],
+  },
+  {
+    title: "离店清爽造型",
+    subtitle: "修型之后，连尾巴都很有精神。",
+    ariaLabel: "离店清爽造型轮播控制",
+    images: [
+      { src: "/gallery-style-1.png", alt: "宠物洗护完成后的离店造型照片，小狗清爽精致" },
+      { src: "/gallery-style-2.png", alt: "高级宠物店拍照角里的清爽造型猫咪照片" },
+      { src: "/gallery-style-3.png", alt: "两只完成造型的小狗在宠物店离店前的合影" },
+    ],
+  },
+];
+
+export const reviews: Review[] = [
+  {
+    quote: "第一次带我家比熊来，美容师很耐心，洗完毛发特别松软，连耳朵边的小细节也处理得很干净。",
+    name: "林小姐 · 比熊主人",
+    avatar: "林",
+  },
+  {
+    quote: "猫咪比较怕吹风，本来很担心应激，结果店里会先让它熟悉环境，整个过程比预想轻松很多。",
+    name: "周先生 · 英短主人",
+    avatar: "周",
+  },
+  {
+    quote: "预约沟通很顺，造型也做得自然，不会过度修剪。每次洗完回来都像换了一只精神小狗。",
+    name: "许女士 · 柯基主人",
+    avatar: "许",
+  },
+];
+
+export const contactInfo = {
+  phone: "400-800-2026",
+  phoneHref: "tel:4008002026",
+  emailHref: "mailto:hello@bubbletail.pet",
+  wechat: "BubbleTail-Spa",
+  address: "春和路 88 号 1 层 泡泡尾巴宠物洗护店",
+};
